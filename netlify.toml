@@ -1,0 +1,15 @@
+[functions]
+  external_node_modules = ["@napi-rs/canvas"]
+
+  [[redirects]]
+    from = "/api/rank"
+      to = "/.netlify/functions/rank"
+        status = 200
+          force = true
+
+          [[redirects]]
+            from = "/api/rank.png"
+              to = "/.netlify/functions/rank"
+                status = 200
+                  force = true
+                  
